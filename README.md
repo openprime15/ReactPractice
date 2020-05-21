@@ -1,3 +1,20 @@
+리액트 연습용
+
+1. 리액트 설치
+   - npx create-react-app [프로젝트명] --template typescript
+2. GIT으로 들어간 뒤 연동하고자 하는 Repository 생성
+3. 리액트 프로젝트 폴더로 이동 후 다음 명령어 입력
+   - git init
+   - git status
+     - commit이 필요하면 add 후 commit 할것
+     - git add .
+     - git commit -m 'first commit'
+4. 해당 프로젝트에서 .git 폴더 생성 확인 후 다음 명령어 입력
+   - git remote add origin [연동하고자하는 Repository 주소]
+     - ex) git remote add origin https://github.com/openprime15/ReactPractice.git
+   - git push origin master
+5. GIT으로 들어가 연동이 성공했는지 확인
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -30,15 +47,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `yarn eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
