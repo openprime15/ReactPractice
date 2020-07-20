@@ -15,6 +15,8 @@
    - git push origin master
 5. GIT으로 들어가 연동이 성공했는지 확인
 
+6. yarn start
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
