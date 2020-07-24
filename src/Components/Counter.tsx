@@ -1,15 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Counter() {
-  const [count, setCount] = useState<number>(0);
-  const onIncrease = () => setCount(count + 1);
-  const onDecrease = () => setCount(count - 1);
+type CounterProps = {
+  countb: number;
+  onIncrease: () => void;
+  onDecrease: () => void;
+  onIncreaseBy: (diff: number) => void;
+};
+
+function Counter({
+  countb,
+  onIncrease,
+  onDecrease,
+  onIncreaseBy,
+}: CounterProps) {
   return (
     <div>
-      <h1>{count}</h1>
+      <h1>{countb}</h1>
       <div>
         <button onClick={onIncrease}>+1</button>
         <button onClick={onDecrease}>-1</button>
+        <button onClick={() => onIncreaseBy(5)}>+5</button>
       </div>
     </div>
   );

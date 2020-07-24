@@ -1,6 +1,9 @@
 import React from "react";
-import Counter from "./Components/Counter";
+import CounterContainer from "./containers/CounterContainer";
 import MyForm from "./Components/MyForm";
+import TodoInsert from "./Components/TodoInsert";
+import TodoList from "./Components/TodoList";
+import TestPage from "./Components/TestPage";
 import {
   BrowserRouter as Router,
   Route,
@@ -82,6 +85,12 @@ function App() {
           <li>
             <Link to="/myform">MyForm</Link>
           </li>
+          <li>
+            <Link to="/todo">todo</Link>
+          </li>
+          <li>
+            <Link to="/test">testPage</Link>
+          </li>
         </ul>
       </nav>
       <Switch>
@@ -89,8 +98,18 @@ function App() {
         <Route path="/intro" render={() => <h3>소개</h3>} />
         <Route path="/posts" component={PostList} />
         <Route path="/admin" component={Admin} />
-        <Route path="/counter" component={Counter} />
+        <Route path="/counter" component={CounterContainer} />
+        <Route path="/test" component={TestPage} />
         <Route path="/myform" render={() => <MyForm onSubmit={onSubmit} />} />
+        <Route
+          path="/todo"
+          render={() => (
+            <>
+              <TodoInsert />
+              <TodoList />
+            </>
+          )}
+        />
         <Route component={NotFound} />
       </Switch>
     </Router>
